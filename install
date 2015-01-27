@@ -1,0 +1,7 @@
+if [ ! -f jSpellCorrect-0.4.jar ]; then
+  wget http://developer.gauner.org/jspellcorrect/jSpellCorrect-0.4.jar
+fi
+mvn install:install-file -Dfile=jSpellCorrect-0.4.jar -DgroupId=jSpellCorrect     -DartifactId=jSpellCorrect -Dversion=0.4 -Dpackaging=jar
+if [ -f jSpellCorrect-0.4.jar ]; then
+  rm *.jar
+fi
